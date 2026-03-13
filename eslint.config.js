@@ -34,7 +34,6 @@ export default [
       ...reactPlugin.configs.recommended.rules,
       ...reactPlugin.configs['jsx-runtime'].rules,
       'react/jsx-uses-vars': 'error',
-      'react/prop-types': 'off',
     },
   },
 ];
