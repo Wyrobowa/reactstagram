@@ -40,7 +40,7 @@
     "redux": "^5.0.1",
     "styled-components": "^6.3.12",
     "styled-normalize": "^8.1.1",
-    "tharaday": "^0.7.5"
+    "tharaday": "^0.7.6"
   },
   "overrides": {
     "eslint-plugin-react": {
