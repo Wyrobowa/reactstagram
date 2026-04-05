@@ -16,7 +16,7 @@ export const LikesHeart = styled.span`
   display: block;
 
   &.like-enter {
-    transition: all .2s;
+    transition: all 0.2s;
     transform: translateX(-50%) translateY(-50%) scale(1);
     opacity: 1;
 
@@ -27,29 +27,5 @@ export const LikesHeart = styled.span`
 
   .like-leave-active {
     display: none;
-  }
-`;
-
-export const SpeechBubble = styled.span`
-  width: 1.5rem;
-  height: 1rem;
-  background: #125688;
-  display: inline-block;
-  border-radius: 50%;
-  position: relative;
-  //top: -3px;
-  margin-right: 5px;
-  
-  &::after {
-    display: inline-block;
-    position: absolute;
-    content: '';
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 1.25rem 1rem 0;
-    border-color: transparent #125688 transparent transparent;
-    top: 25%;
-    left: 0;
   }
 `;
