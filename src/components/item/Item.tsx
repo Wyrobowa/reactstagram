@@ -15,7 +15,7 @@ const Item = () => {
 
   if (loading) {
     return (
-      <Box maxWidth={1200} display="flex" justifyContent="space-between" gap={8} marginX="auto">
+      <Box width="100%" display="flex" justifyContent="space-between" gap={8}>
         <Box flex={6}>
           <Skeleton height={500} width="100%" />
         </Box>
@@ -32,7 +32,7 @@ const Item = () => {
   }
 
   return (
-    <Box maxWidth={1200} marginX="auto">
+    <Box width="100%">
       {postId && posts[index] && (
         <Box display="flex" justifyContent="space-between" gap={8}>
           <Box flex={6}>

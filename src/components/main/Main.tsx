@@ -54,7 +54,9 @@ const Main = ({ children }: MainProps) => {
       )}
       <Box display="flex" padding={8} justifyContent="center">
         {isAuthenticated ? (
-          children
+          <Box width="100%" maxWidth={1200}>
+            {children}
+          </Box>
         ) : (
           <Box display="flex" flexDirection="column" alignItems="center" gap={4} paddingY={12}>
             <Text variant="h2">Welcome to Reactstagram</Text>

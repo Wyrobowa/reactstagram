@@ -14,7 +14,7 @@ const Grid = () => {
   }, [posts, searchTerm]);
 
   return (
-    <Box display="flex" flexDirection="column" gap={8} maxWidth="75rem">
+    <Box display="flex" flexDirection="column" gap={8} width="100%">
       <Box marginBottom={8}>
         <Input
           placeholder="Search posts by caption..."
