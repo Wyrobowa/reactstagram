@@ -1,4 +1,4 @@
-import React, { ReactNode, useState, useEffect } from 'react';
+import { ReactNode, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Header, Text, Box, Button, Notification } from 'tharaday';
 import { useAppDispatch, useAppSelector } from '../../hooks';
@@ -24,10 +24,12 @@ const Main = ({ children }: MainProps) => {
   const handleLogin = () => dispatch(login());
   const handleLogout = () => dispatch(logout());
 
-  const userWithAvatar = user ? {
-    ...user,
-    avatar: `https://i.pravatar.cc/150?u=${user.name}`
-  } : undefined;
+  const userWithAvatar = user
+    ? {
+        ...user,
+        avatar: `https://i.pravatar.cc/150?u=${user.name}`,
+      }
+    : undefined;
 
   return (
     <div>
@@ -51,7 +53,9 @@ const Main = ({ children }: MainProps) => {
         </Box>
       )}
       <Box display="flex" padding={8} justifyContent="center">
-        {isAuthenticated ? children : (
+        {isAuthenticated ? (
+          children
+        ) : (
           <Box display="flex" flexDirection="column" alignItems="center" gap={4} paddingY={12}>
             <Text variant="h2">Welcome to Reactstagram</Text>
             <Text variant="body-lg">Please log in to see your feed and interact with posts.</Text>

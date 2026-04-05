@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState, type ChangeEvent, type FormEvent } from 'react';
 import { useParams } from 'react-router-dom';
 import { Box, Text, Input, Button } from 'tharaday';
 
@@ -16,7 +16,7 @@ const Comments = ({ comments }: CommentsProps) => {
   const dispatch = useAppDispatch();
   const { postId } = useParams<{ postId: string }>();
 
-  const handleOnChange = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
+  const handleOnChange = ({ target }: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
@@ -27,7 +27,7 @@ const Comments = ({ comments }: CommentsProps) => {
     }
   };
 
-  const handleSubmit = (event: React.FormEvent) => {
+  const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
     const { author, comment } = formData;
     if (!author || !comment || !postId) return;
