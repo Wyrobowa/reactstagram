@@ -20,7 +20,10 @@ const commentsSlice = createSlice({
     getComments: () => {
       return commentsData;
     },
-    addComment: (state, action: PayloadAction<{ postId: string; author: string; comment: string }>) => {
+    addComment: (
+      state,
+      action: PayloadAction<{ postId: string; author: string; comment: string }>,
+    ) => {
       const { postId, author, comment } = action.payload;
       if (!state[postId]) {
         state[postId] = [];

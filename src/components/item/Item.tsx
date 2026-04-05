@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useMemo } from 'react';
 import { useParams } from 'react-router-dom';
 import { Box, Skeleton } from 'tharaday';
 import { useDataFetching } from '../../hooks/useDataFetching';
@@ -11,10 +11,7 @@ const Item = () => {
   const { posts, comments, loading } = useDataFetching();
   const { postId } = useParams<{ postId: string }>();
 
-  const index = useMemo(
-    () => posts.findIndex(post => post.code === postId),
-    [posts, postId],
-  );
+  const index = useMemo(() => posts.findIndex((post) => post.code === postId), [posts, postId]);
 
   if (loading) {
     return (
@@ -25,9 +22,9 @@ const Item = () => {
         <Box flex={4}>
           <Skeleton height={20} width="60%" />
           <Box marginTop={4}>
-             <Skeleton height={40} width="100%" />
-             <Skeleton height={40} width="100%" />
-             <Skeleton height={40} width="100%" />
+            <Skeleton height={40} width="100%" />
+            <Skeleton height={40} width="100%" />
+            <Skeleton height={40} width="100%" />
           </Box>
         </Box>
       </Box>
@@ -39,12 +36,7 @@ const Item = () => {
       {postId && posts[index] && (
         <Box display="flex" justifyContent="space-between" gap={8}>
           <Box flex={6}>
-            <Photo
-              post={posts[index]}
-              comments={comments[postId]}
-              index={index}
-              type="item"
-            />
+            <Photo post={posts[index]} comments={comments[postId]} index={index} type="item" />
           </Box>
           <Box flex={4}>
             <Comments comments={comments[postId]} />

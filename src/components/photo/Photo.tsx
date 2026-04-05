@@ -53,7 +53,7 @@ const Photo = ({ post, comments, index, type }: PhotoProps) => {
       style={{
         position: 'relative',
         boxShadow: '0 0 0 5px rgba(0, 0, 0, 0.03)',
-        overflow: 'hidden'
+        overflow: 'hidden',
       }}
     >
       <Box style={{ position: 'relative' }}>
@@ -63,7 +63,7 @@ const Photo = ({ post, comments, index, type }: PhotoProps) => {
             alt={post.caption}
             style={{
               width: '100%',
-              display: 'block'
+              display: 'block',
             }}
           />
         </Link>
@@ -74,7 +74,9 @@ const Photo = ({ post, comments, index, type }: PhotoProps) => {
           classNames="like"
           nodeRef={nodeRef}
         >
-          <Styled.LikesHeart ref={nodeRef} className="likes-heart">{post.likes}</Styled.LikesHeart>
+          <Styled.LikesHeart ref={nodeRef} className="likes-heart">
+            {post.likes}
+          </Styled.LikesHeart>
         </CSSTransition>
       </Box>
 

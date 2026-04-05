@@ -1,4 +1,4 @@
-import { Routes, BrowserRouter as Router, Route } from "react-router-dom";
+import { Routes, BrowserRouter as Router, Route } from 'react-router-dom';
 
 // Common
 import { routes } from './common/consts';
@@ -6,7 +6,7 @@ import { routes } from './common/consts';
 // Components
 import Grid from './components/grid/Grid';
 import Item from './components/item/Item';
-import Main from "./components/main/Main";
+import Main from './components/main/Main';
 
 const App = () => {
   return (
